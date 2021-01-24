@@ -11,6 +11,7 @@ public class AssignmentTwo{
 		double withdrawAmount = 0;
 		double depositAmount = 0;
 
+		//Account One
 		Account firstAccount = new Account();
 		firstAccount.setID(2211);
 		firstAccount.setBalance(50_000);
@@ -27,6 +28,7 @@ public class AssignmentTwo{
 		System.out.println("Balance: $" + firstAccount.getBalance() + "\n" +
 		"Monthly Interest: $" + firstAccount.getMonthlyInterest() + "\n");
 
+		//Account Two
 		Account secondAccount = new Account(1122, 20_000);
 		secondAccount.setAnnualIR(4.5);
 		System.out.println("ID: " + secondAccount.getID() + "\n" +
