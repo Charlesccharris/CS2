@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
 class Assignment10_5{
 	public static void main(String[] args){
 /*		(Displaying the prime factors)
@@ -12,37 +15,46 @@ class Assignment10_5{
 		and retrieve and display them in reverse order
 */
 
-		int number = 120;
+		int[] prime = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+		Scanner input = new Scanner(System.in);
 		StackOfIntegers listOfPrimes = new StackOfIntegers();
-//		System.out.println("Please input your whole number: ");
+		int number = 1;
+		int newNumber = 0;
+		int size = 1;
+
+		System.out.print("Please input your whole number: ");
+		number = input.nextInt();
 
 		while(number != 1){
+			newNumber = number;
 			System.out.println(number);
-			if((number % 2) == 0){
-				listOfPrimes.push(2);
-				number /= 2;
+			for(int index = 0; index < prime.length; index++){
+				if((number % prime[index]) == 0){
+					listOfPrimes.push(prime[index]);
+					number /= prime[index];
+					index = 0;
+				}
 			}
-			else if((number % 3) == 0){
-				listOfPrimes.push(3);
-				number /= 3;
-			}
-			else if((number % 5) == 0){
-				listOfPrimes.push(5);
-				number /= 5;
-			}
-			else if((number % 7) == 0){
-				listOfPrimes.push(7);
-				number /= 7;
-			}
-			else if((number % 11) == 0){
-				listOfPrimes.push(11);
-				number /= 11;
+			if(newNumber == number){
+				System.out.println("Sorry, the next prime for your number can't be found, try a different one number.");
+				System.exit(1);
 			}
 		}
 
-//		listOfPrimes.push();
+		size = listOfPrimes.getSize();
+		int[] numbers = new int[size];
 
-		while(!listOfPrimes.empty())
-			System.out.print(listOfPrimes.pop() + " ");
+		while(!listOfPrimes.empty()){
+			for(int i = 0; i < size; i++){
+				numbers[i] = listOfPrimes.pop();
+			}
+		}
+		Arrays.sort(numbers);
+
+		System.out.print("We found the following prime numbers: ");
+		for(int i = size - 1; i > -1; i--){
+			System.out.print(numbers[i] + " ");
+		}
+		System.out.println();
 	}
 }
