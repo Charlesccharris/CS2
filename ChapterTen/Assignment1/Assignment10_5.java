@@ -16,8 +16,31 @@ class Assignment10_5{
 		StackOfIntegers listOfPrimes = new StackOfIntegers();
 //		System.out.println("Please input your whole number: ");
 
-		for(int i =0; i < 10; i++)
-			listOfPrimes.push(i);
+		while(number != 1){
+			System.out.println(number);
+			if((number % 2) == 0){
+				listOfPrimes.push(2);
+				number /= 2;
+			}
+			else if((number % 3) == 0){
+				listOfPrimes.push(3);
+				number /= 3;
+			}
+			else if((number % 5) == 0){
+				listOfPrimes.push(5);
+				number /= 5;
+			}
+			else if((number % 7) == 0){
+				listOfPrimes.push(7);
+				number /= 7;
+			}
+			else if((number % 11) == 0){
+				listOfPrimes.push(11);
+				number /= 11;
+			}
+		}
+
+//		listOfPrimes.push();
 
 		while(!listOfPrimes.empty())
 			System.out.print(listOfPrimes.pop() + " ");
