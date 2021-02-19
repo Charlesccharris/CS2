@@ -1,5 +1,21 @@
 class Student extends Person{
-/*	Class Status: Freshman, Sophomore
-		Junior, Senior
+/*	---------------------
+		Student
+	---------------------
+	classStatus: String
+	---------------------
+	Student();
+	toString(): String
+	---------------------
 */
+	private String status;
+
+	public void setStatus(String newStatus){
+		this.status = newStatus;
+	}
+
+	public String toString(String info){
+		info += "\nClass Status: " + status;
+		return info;
+	}
 }
