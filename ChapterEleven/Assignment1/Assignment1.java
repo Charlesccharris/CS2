@@ -22,12 +22,18 @@ class Assignment1{
 		String info ="";
 
 		Person Generic = new Person("Bob", "123 W Road", "(555)-555-5555", "Bob@hotmail.com");
-		Student
-		Employee
-		Faculty joeBob = new Faculty();
-		Staff
+		Student Jim = new Student("Jim Beam", "3466 Well Dr.", "(208)-555-2342", "JB@mail.eu", 1);
+		Employee Suzan = new Employee("Suzan Anthony", "65432 Road Ave", "(123)-456-7890", "SuZNa@mail.gov",
+				234, 3920);
+		Faculty Joe = new Faculty("Joe Bob", "8939 W North Rd", "(302)-352-2446", "JoBo@umail.ru.jp",
+				294, 49204, "11AM - 4PM", "Professor");
+		Staff Phil = new Staff("Phill conners", "1234 Generic Rd", "(987)-654-3210", "PC@Email.net", 123,
+			29303, "Assistant Principal");
 
-		System.out.println(info);
-
+		System.out.println(Generic.toString());
+		System.out.println(Jim.toString());
+		System.out.println(Suzan.toString());
+		System.out.println(Joe.toString());
+		System.out.println(Phil.toString());
 	}
 }

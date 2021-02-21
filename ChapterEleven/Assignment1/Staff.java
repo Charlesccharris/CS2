@@ -1,23 +1,37 @@
 class Staff extends Employee{
-//	Title
-/*	-------------
-		Staff
-	-------------------
-	title
-	------------------
-	setTitle
-	toString()
-	------------------
+/*	--------------------------------------
+			Staff
+	--------------------------------------
+	-title: String
+	--------------------------------------
+	Staff(name: String, address: String,
+		phone: String, email: String,
+		office: int, salary: double,
+		title: String)
+	+setTitle(newTitle: String): void
+	+getTitle(): String
+	+toString(): String
+	--------------------------------------
 */
 
 	private String title;
+
+	Staff(String name, String address, String phone,
+		String email, int office, double salary, String title){
+		super(name, address, phone, email, office, salary);
+		this.title = title;
+	}
 
 	public void setTitle(String newTitle){
 		this.title = newTitle;
 	}
 
-	public String toString(String info){
-		info += super.toString + "\nTitle: " + title;
-		return info;
+	public String getTitle(){
+		return title;
+	}
+
+	@Override
+	public String toString(){
+		return super.toString() + "\nTitle: " + title;
 	}
 }
