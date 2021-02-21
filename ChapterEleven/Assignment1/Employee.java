@@ -3,4 +3,20 @@ class Employee extends Person{
 	Salary
 	Date Hired
 */
+
+	public void setOffice(){
+
+	}
+
+	public void setSalary(){
+
+	}
+
+	public void setDate(){
+
+	}
+
+//	public String toString(){
+
+//	}
 }

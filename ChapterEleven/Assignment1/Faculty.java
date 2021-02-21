@@ -21,9 +21,10 @@ class Faculty extends Employee{
 		this.rank = newRank;
 	}
 
-	public String toString(String info){
-		info = "\nOffice Hours: " + officeHours +
+	@Override
+	public String toString(String name){
+		return super.toString() + "\nName: " + name +
+			"\nOffice Hours: " + officeHours +
 			"\nRank: " + rank;
-		return info;
 	}
 }

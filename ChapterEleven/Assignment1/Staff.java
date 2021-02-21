@@ -17,7 +17,7 @@ class Staff extends Employee{
 	}
 
 	public String toString(String info){
-		info += "\nTitle: " + title;
+		info += super.toString + "\nTitle: " + title;
 		return info;
 	}
 }
