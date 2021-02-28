@@ -16,9 +16,9 @@ class Staff extends Employee{
 
 	private String title;
 
-	Staff(String name, String address, String phone,
+	Staff(String name, String nameOfClass,  String address, String phone,
 		String email, int office, double salary, String title){
-		super(name, address, phone, email, office, salary);
+		super(name, nameOfClass, address, phone, email, office, salary);
 		this.title = title;
 	}
 

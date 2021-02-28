@@ -2,10 +2,11 @@ class Person{
 /*	------------------------------------
 			Person
 	------------------------------------
-	-name
-	-address
-	-phoneNumber
-	-emailAddress
+	+name: String
+	+nameOfClass: String
+	+address: String
+	+phoneNumber: String
+	+emailAddress: String
 	------------------------------------
 	Person(newName: String, newAddress:
 		String, newPhone: String,
@@ -23,16 +24,19 @@ class Person{
 	------------------------------------
 */
 	public String name;
+	public String nameOfClass;
 	public String address;
 	public String phoneNumber;
 	public String emailAddress;
 
-	Person(String newName, String newAddress,
-		String newPhone, String newEmail){
+	Person(String newName, String newClass,
+		String newAddress, String newPhone,
+		String newEmail){
 		name = newName;
 		address = newAddress;
 		phoneNumber = newPhone;
 		emailAddress = newEmail;
+		nameOfClass = newClass;
 	}
 
 	public void setName(String newName){
@@ -68,7 +72,9 @@ class Person{
 	}
 
 	public String toString(){
-		return "\nName: " + name + "\nAddress: " + address +
+		return "\nName: " + name +
+			"\nClass: " + nameOfClass +
+			"\nAddress: " + address +
 			"\nPhone Number: " + phoneNumber +
 			"\nEmail Address: " + emailAddress;
 	}

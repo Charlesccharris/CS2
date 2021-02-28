@@ -19,9 +19,9 @@ class Student extends Person{
 	public final static int JUNIOR = 3;
 	public final static int SENIOR = 4;
 
-	Student(String name, String address, String phone,
-		String email, int status){
-		super(name, address, phone, email);
+	Student(String name, String nameOfClass, String address,
+		String phone, String email, int status){
+		super(name, nameOfClass, address, phone, email);
 		this.status = status;
 	}
 
@@ -44,3 +44,4 @@ class Student extends Person{
 		return super.toString() + "\nClass Status: " + getStatus(status);
 	}
 }
+

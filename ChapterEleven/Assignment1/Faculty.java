@@ -20,10 +20,10 @@ class Faculty extends Employee{
 	private String officeHours;
 	private String rank;
 
-	Faculty(String name, String address, String phone,
+	Faculty(String name, String nameOfClass, String address, String phone,
 		String email, int office, double salary,
 		String newHours, String newRank){
-		super(name, address, phone, email, office, salary);
+		super(name, nameOfClass, address, phone, email, office, salary);
 		this.officeHours = newHours;
 		this.rank = newRank;
 	}

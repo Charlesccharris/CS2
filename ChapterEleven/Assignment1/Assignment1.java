@@ -21,13 +21,13 @@ class Assignment1{
 */
 		String info ="";
 
-		Person Generic = new Person("Bob", "123 W Road", "(555)-555-5555", "Bob@hotmail.com");
-		Student Jim = new Student("Jim Beam", "3466 Well Dr.", "(208)-555-2342", "JB@mail.eu", 1);
-		Employee Suzan = new Employee("Suzan Anthony", "65432 Road Ave", "(123)-456-7890", "SuZNa@mail.gov",
+		Person Generic = new Person("Bob", "Person", "123 W Road", "(555)-555-5555", "Bob@hotmail.com");
+		Student Jim = new Student("Jim Beam", "Student", "3466 Well Dr.", "(208)-555-2342", "JB@mail.eu", 1);
+		Employee Suzan = new Employee("Suzan Anthony", "Employee", "65432 Road Ave", "(123)-456-7890", "SuZNa@mail.gov",
 				234, 3920);
-		Faculty Joe = new Faculty("Joe Bob", "8939 W North Rd", "(302)-352-2446", "JoBo@umail.ru.jp",
+		Faculty Joe = new Faculty("Joe Bob", "Faculty", "8939 W North Rd", "(302)-352-2446", "JoBo@umail.ru.jp",
 				294, 49204, "11AM - 4PM", "Professor");
-		Staff Phil = new Staff("Phill conners", "1234 Generic Rd", "(987)-654-3210", "PC@Email.net", 123,
+		Staff Phil = new Staff("Phill Conners", "Staff", "1234 Generic Rd", "(987)-654-3210", "PC@Email.net", 123,
 			29303, "Assistant Principal");
 
 		System.out.println(Generic.toString());

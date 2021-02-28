@@ -22,9 +22,9 @@ class Employee extends Person{
 	private double salary;
 	private MyDate dateHired;
 
-	Employee(String name, String address, String phone,
+	Employee(String name, String nameOfClass, String address, String phone,
 		String email, int newOffice, double newSalary){
-		super(name, address, phone, email);
+		super(name, nameOfClass, address, phone, email);
 		this.office = newOffice;
 		this.salary = newSalary;
 		this.dateHired = new MyDate();
