@@ -23,12 +23,12 @@ class Assignment1{
 		getIndex(index, array);
 	}
 
-	public static void getIndex(int index, int[] array)
-			throws ArrayIndexOutOfBoundsException{
-		if(index >= 0 && index <= 99){
+	public static void getIndex(int index, int[] array){
+		try{
 			System.out.println(array[index]);
 		}
-		else
-			throw new ArrayIndexOutOfBoundsException("Out of Bounds");
+		catch (ArrayIndexOutOfBoundsException ex) {
+			System.out.println("Out of Bounds");
+		}
 	}
 }
