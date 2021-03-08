@@ -1,5 +1,8 @@
+import java.io.*;
+import java.util.*;
+
 class Assignment2{
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 /*		(Count characters, words, and lines in a file)
 		Write a program that will count the number of
 		characters, words, and lines in a file.
@@ -7,6 +10,40 @@ class Assignment2{
 		The file name should be passed as a command-line
 		argument, as shown in figue 12.13.
 */
-		System.out.println(99);
+
+		File file = new File("Assignment2.java");
+		FileInputStream fileStream = new FileInputStream(file);
+		InputStreamReader input = new InputStreamReader(fileStream);
+		BufferedReader reader = new BufferedReader(input);
+
+		String line;
+
+		int countWord = 0;
+		int sentenceCount = 0;
+		int characterCount = 0;
+		int paragraphCount = 1;
+		int whitespaceCount = 0;
+
+		while((line = reader.readLine()) != null){
+ 			if(line.equals("")){
+ 				paragraphCount++;
+			}
+			else {
+				characterCount += line.length();
+
+		String[] wordList = line.split("\\s+");
+		countWord += wordList.length;
+		whitespaceCount += countWord -1;
+
+		String[] sentenceList = line.split("[!?.:]+");
+
+		sentenceCount += sentenceList.length;
+		}
+	}
+	System.out.println("Total word count = " + countWord);
+	System.out.println("Total number of sentences = " + sentenceCount);
+	System.out.println("Total number of characters = " + characterCount);
+	System.out.println("Number of paragraphs = " + paragraphCount);
+	System.out.println("Total number of whitespaces = " + whitespaceCount);
 	}
 }
